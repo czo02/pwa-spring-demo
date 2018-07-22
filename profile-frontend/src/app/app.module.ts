@@ -19,6 +19,8 @@ import {PageNotFoundComponent} from './page-not-found/page-not-found.component';
 import {FooterComponent} from './footer/footer.component';
 import {HttpClientModule} from '@angular/common/http';
 import {ProfileService} from './profile.service';
+import { ServiceWorkerModule } from '@angular/service-worker';
+import { environment } from '../environments/environment';
 
 const appRoutes: Routes = [
   {
@@ -60,7 +62,8 @@ const appRoutes: Routes = [
     RouterModule.forRoot(
       appRoutes,
       // { enableTracing: true } // <-- debugging purposes only
-    )
+    ),
+    ServiceWorkerModule.register('/ngsw-worker.js', { enabled: environment.production })
   ],
   providers: [ProfileService],
   bootstrap: [AppComponent]
