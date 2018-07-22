@@ -48,3 +48,9 @@ body {
   display: flex;
   align-items:center;
 }
+.no-hover-effect.mat-button .mat-button-focus-overlay,
+.no-hover-effect.mat-button .mat-button-focus-overlay,
+.no-hover-effect.mat-button .mat-button-focus-overlay
+{
+  background-color: transparent;
+}
