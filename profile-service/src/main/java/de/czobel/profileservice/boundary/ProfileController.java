@@ -20,13 +20,13 @@ public class ProfileController {
         profiles.put(jane.getName(), jane);
     }
 
-    @GetMapping(value = "/profiles")
+    @GetMapping(value = "/api/profiles")
     @ResponseBody
     public ResponseEntity getProfiles() {
         return new ResponseEntity<>(profiles.values(), HttpStatus.OK);
     }
 
-    @GetMapping(value = "/profiles/{name}")
+    @GetMapping(value = "/api/profiles/{name}")
     @ResponseBody
     public ResponseEntity getProfileByName(@PathVariable final String name) {
         Profile profile = profiles.get(name);
