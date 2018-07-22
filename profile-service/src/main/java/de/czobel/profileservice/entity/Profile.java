@@ -5,11 +5,17 @@ public class Profile {
     private String name;
     private String description;
     private String pictureUrl;
+    private int likes;
 
     public Profile(String name, String description, String pictureUrl) {
         this.name = name;
         this.description = description;
         this.pictureUrl = pictureUrl;
+    }
+
+    public Profile(String name, String description) {
+        this.name = name;
+        this.description = description;
     }
 
     public String getName() {
@@ -22,5 +28,13 @@ public class Profile {
 
     public String getPictureUrl() {
         return pictureUrl;
+    }
+
+    public int getLikes() {
+        return likes;
+    }
+
+    public void addLike() {
+        likes++;
     }
 }

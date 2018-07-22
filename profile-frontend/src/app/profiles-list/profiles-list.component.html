@@ -1,3 +1,3 @@
-<div *ngFor="let profile of getProfiles()">
-  <app-profile [_profile]="profile"></app-profile>
+<div class="profiles-container">
+  <app-profile *ngFor="let profile of getProfiles()" [_profile]="profile"></app-profile>
 </div>

@@ -1,3 +1,17 @@
-<h3>{{profile.name}}</h3>
-<p>{{profile.description}}</p>
-<img class="profile-logo" src="assets/img/{{profile.pictureUrl}}">
+<mat-card class="profile-card">
+  <mat-card-header>
+    <div mat-card-avatar><img class="profile-logo" src="{{pictureUrl}}">
+    </div>
+    <mat-card-title>{{name}}</mat-card-title>
+    <mat-card-subtitle>{{likes}} Likes</mat-card-subtitle>
+  </mat-card-header>
+  <mat-card-content>
+    <p class="profile-description">{{description}}</p>
+  </mat-card-content>
+  <mat-card-actions>
+    <div class="button-row">
+      <button mat-raised-button color="primary" (click)="like()">Like</button>
+      <button mat-raised-button color="primary">Edit</button>
+    </div>
+  </mat-card-actions>
+</mat-card>

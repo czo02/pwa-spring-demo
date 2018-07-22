@@ -3,9 +3,15 @@
   <div class="page-wrap">
     <header role="banner">
       <mat-toolbar color="primary" class="mat-elevation-z6 app-toolbar">
-        <a [routerLink]="['/profiles']" class="mat-button">
+        <a [routerLink]="['/']" mat-button>
           <img src="assets/img/user.svg" alt="user" class="user-logo">
-          <span>Profiles</span>
+          <span>My Profiles App</span>
+        </a>
+        <a [routerLink]="['/profiles']" mat-button>
+          <span>Profiles List</span>
+        </a>
+        <a [routerLink]="['/addProfile']" mat-button>
+          <span>Add profile</span>
         </a>
       </mat-toolbar>
     </header>

@@ -6,6 +6,7 @@ import {HttpClient} from '@angular/common/http';
 })
 export class ProfileService {
   private allProfilesUrl = 'api/profiles';
+  private likeUrl = 'api/profile/like/';
 
   constructor(private http: HttpClient){
 
@@ -13,5 +14,9 @@ export class ProfileService {
 
   public getAllProfiles() {
     return this.http.get(this.allProfilesUrl);
+  }
+
+  public like(name: String) {
+    return this.http.get(this.likeUrl + name);
   }
 }
