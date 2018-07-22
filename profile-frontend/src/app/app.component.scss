@@ -1,0 +1,10 @@
+
+
+/*
+ * User logo should fit in the toolbar and be white (invert black svg image)
+ */
+.user-logo {
+  height: 32px;
+  filter: invert(100%);
+  margin: 0 4px 3px 0;
+}

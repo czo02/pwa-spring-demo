@@ -1,23 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 @import "~@angular/material/prebuilt-themes/indigo-pink.css";
 
-/*
- * Actual Sticky Footer Styles
- */
-.all-wrap {
-  min-height: 100vh;
-}
-
-.page-wrap {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
-.content {
-  flex: 1;
-}
-
 
 /*
  * Make the Component injected by Router Outlet full height:
@@ -25,8 +8,43 @@
 main {
   display: flex;
   flex-direction: column;
-> *:not(router-outlet) {
-  flex: 1;
-  display: block;
+  margin: 8px;
+  > *:not(router-outlet) {
+    flex: 1;
+    display: block;
+  }
 }
+.page-wrap {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+.content {
+  flex: 1;
+}
+
+/*
+ * Make the toolbar justified without space too the side
+ */
+body {
+  margin: 0px;
+  font-family: Roboto,"Helvetica Neue Light","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+.app-toolbar {
+  padding: 8px 16px;
+}
+
+
+/*
+ * Global button styles
+ */
+.mat-button {
+  text-decoration: none;
+  line-height: 36px;
+  vertical-align: baseline;
+  padding: 0 16px;
+  white-space: nowrap;
+  min-width: 88px;
+  display: flex;
+  align-items:center;
 }
