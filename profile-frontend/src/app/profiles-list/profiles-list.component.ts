@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {ProfileService} from '../profile.service';
+import {Profile} from '../entities/Profile';
 
 @Component({
   selector: 'app-profiles-list',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./profiles-list.component.scss']
 })
 export class ProfilesListComponent implements OnInit {
+  private profiles: Profile[];
 
-  constructor() { }
+  constructor(private profileService: ProfileService) { }
 
   ngOnInit() {
+    this.showProfiles();
   }
 
+  showProfiles() {
+    this.profileService.getAllProfiles()
+      .subscribe((data: Profile[]) => {
+        this.profiles = data;
+      });
+  }
+
+  getProfiles() {
+    return this.profiles;
+  }
 }
