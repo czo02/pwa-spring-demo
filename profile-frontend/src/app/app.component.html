@@ -1,0 +1,26 @@
+<mat-sidenav-container>
+
+  <div class="page-wrap">
+    <header role="banner">
+      <mat-toolbar color="primary" class="mat-elevation-z6 app-toolbar">
+        <a [routerLink]="['/']" mat-button>
+          <img src="assets/img/logo.png" alt="user" class="user-logo">
+          <span>My Profiles App</span>
+        </a>
+        <a [routerLink]="['/profiles']" mat-button>
+          <span>Profiles List</span>
+        </a>
+        <a [routerLink]="['/addProfile']" mat-button>
+          <span>Add profile</span>
+        </a>
+      </mat-toolbar>
+    </header>
+    <main class="content">
+      <router-outlet></router-outlet>
+    </main>
+
+    <app-footer></app-footer>
+  </div>
+</mat-sidenav-container>
+
+
